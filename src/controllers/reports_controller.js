@@ -57,15 +57,8 @@ const actualizarestadoReporte = async (req, res) => {
 
 
 const listarReportes = async (req, res) => {
-    const { id } = req.params
-    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).json({ msg: `Lo sentimos, no existe ese Administrador ${id}` });
-    const administrador = await Administrator.findById(id).select("-createdAt -updatedAt -__v -reporte -password -token -confirmarEmail -status")
-    if (!administrador) {
-        return res.status(404).json({ msg: `Lo sentimos, no existe ese Administrador ${id}` });
-    }
     const reports = await Reports.find({ status: true }).where('usuario').select("-createdAt -updatedAt -__v")
     res.status(200).json({
-        administrador,
         reports
     })
 }
