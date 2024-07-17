@@ -979,7 +979,7 @@ const options = {
       },
       "parameters": {
         "jwttoken": {
-          "name": "Verification",
+          "name": "token",
           "in": "path",
           "description": "JWT de autenticación requerido.",
           "required": true,
