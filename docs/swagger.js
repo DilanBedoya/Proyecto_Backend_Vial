@@ -572,23 +572,12 @@ const options = {
           }
         }
       },
-      "/reportes/{id}": {
+      "/reportes": {
         "get": {
           "tags": [
             "Reports"
           ],
-          "summary": "Permite obtener todos los Reportes se encuentren en la Base de Datos mandando el ID del Administrador.",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "Identificador del Administrador .",
-              "required": true,
-              "schema": {
-                "type": "string"
-              }
-            }
-          ],
+          "summary": "Permite obtener todos los Reportes",
           "responses": {
             "200": {
               "description": "(OK) Consulta Realizada con exito.",
