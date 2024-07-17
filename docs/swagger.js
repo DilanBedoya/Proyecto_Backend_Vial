@@ -11,7 +11,7 @@ const options = {
         },
         "servers": [
           {
-            "url": "http://localhost:3000/SourceCraft"
+            "url": "https://proyecto-backend-vial.onrender.com"
           }
         ],
         "tags": [
