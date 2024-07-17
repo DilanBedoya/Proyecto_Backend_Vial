@@ -21,7 +21,7 @@ const sendMailToUser = (userMail, token) => {
         from: process.env.USER_MAILTRAP, //Desde donde
         to: userMail, //Para quien
         subject: "Verifica tu cuenta", //Asunto
-        html: `<p>Hola, haz clic <a href="https://proyecto-backend-vial.onrender.com/user/confirmation/${encodeURIComponent(token)}">aquí</a> para confirmar tu cuenta.</p>`  //cuerpo del mensaje
+        html: `<p>Hola, haz clic <a href="https://proyecto-backend-vial.onrender.com/SourceCraft/user/confirmation/${encodeURIComponent(token)}">aquí</a> para confirmar tu cuenta.</p>`  //cuerpo del mensaje
     };
 
 
@@ -40,7 +40,7 @@ const sendMailToAdmin = (userMail, token) => {
         from: process.env.USER_MAILTRAP, //Desde donde
         to: userMail, //Para quien
         subject: "Verifica tu cuenta", //Asunto
-        html: `<p>Hola, haz clic <a href="https://proyecto-backend-vial.onrender.com/admin/confirmation/${encodeURIComponent(token)}">aquí</a> para confirmar tu cuenta.</p>`  //cuerpo del mensaje
+        html: `<p>Hola, haz clic <a href="https://proyecto-backend-vial.onrender.com/SourceCraft/admin/confirmation/${encodeURIComponent(token)}">aquí</a> para confirmar tu cuenta.</p>`  //cuerpo del mensaje
     };
 
 
@@ -62,7 +62,7 @@ const sendMailToRecoveryPassword = async(userMail,token)=>{
     html: `
     <h1>Sistema de gestión (Viables del DM de Quito 🚗)</h1>
     <hr>
-    <a href=https://proyecto-backend-vial.onrender.com/admin/recover-password/${token}>Clic para reestablecer tu contraseña</a>
+    <a href=https://proyecto-backend-vial.onrender.com/SourceCraft/admin/recover-password/${token}>Clic para reestablecer tu contraseña</a>
     <hr>
     <footer>Grandote te da la Bienvenida!</footer>
     `
@@ -79,7 +79,7 @@ const sendMailToRecoveryPasswordUser = async(userMail,token)=>{
     html: `
     <h1>Sistema de gestión (Viables del DM de Quito 🚗)</h1>
     <hr>
-    <a href=https://proyecto-backend-vial.onrender.com/user/recover-password/${token}>Clic para reestablecer tu contraseña</a>
+    <a href=https://proyecto-backend-vial.onrender.com/SourceCraft/user/recover-password/${token}>Clic para reestablecer tu contraseña</a>
     <hr>
     <footer>Grandote te da la Bienvenida!</footer>
     `
